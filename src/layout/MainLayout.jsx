@@ -1,6 +1,7 @@
 import React from "react";
 import CustomNavbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const MainLayout = ({children}) => {
   return (
@@ -8,6 +9,7 @@ const MainLayout = ({children}) => {
       <CustomNavbar />
       <main>{children}</main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
