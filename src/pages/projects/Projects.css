@@ -1,0 +1,142 @@
+.projects-page {
+  min-height: 100vh;
+  background-color: #f9f2d7;
+  padding: 20px;
+}
+
+.projects-container {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+}
+
+.project-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 🔥 Animated Attractive Title */
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  background: linear-gradient(270deg, #ff8a00, #e52e71, #9d50bb, #00c9ff);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 6s ease infinite, popIn 0.8s ease forwards;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Glow underline */
+.project-title::after {
+  content: "";
+  display: block;
+  margin: 8px auto 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  border-radius: 2px;
+  animation: underlineGlow 3s infinite alternate;
+}
+
+@keyframes underlineGlow {
+  from {
+    opacity: 0.6;
+    transform: scaleX(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.project-description {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.more-content {
+  color: #ddd;
+  margin-top: 10px;
+}
+
+.toggle-more {
+  color: #4caf50;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 15px;
+}
+
+.custom-button {
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  transform: scale(1.05);
+}
+
+.project-image {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.image-hover {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.image-hover:hover {
+  transform: scale(1.05);
+}

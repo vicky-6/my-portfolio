@@ -1,5 +1,5 @@
 import "./App.css";
-import LandingPage from "./pages/LandingPage/BlinkingEffectOne";
+import LandingPage from "./pages/LandingPage/Subline";
 import ResumePage from "./pages/Resume";
 import Contact from "./pages/Contact";
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -75,7 +75,7 @@ function App() {
           element={
             <MainLayout>
               {" "}
-              <Experience/>{" "}
+              <Experience />{" "}
             </MainLayout>
           }
         />
