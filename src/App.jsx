@@ -9,6 +9,7 @@ import ProjectsPage from "./pages/projects/projects";
 import AboutTattooShop from "./pages/projects/AboutTattooShop";
 import AboutWaveyvig from "./pages/projects/AboutWaveyvig";
 import Experience from "./pages/Experience/Experience";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
@@ -48,7 +49,7 @@ function App() {
           element={
             <MainLayout>
               {" "}
-              <Contact />{" "}
+              <ContactUs />{" "}
             </MainLayout>
           }
         />
