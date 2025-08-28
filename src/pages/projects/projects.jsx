@@ -31,19 +31,19 @@ const projects = [
     githubLink: "https://github.com/vicky-6/WaveyvigTech",
   },
   {
-    title: "Vicky's Tattoo Studio",
+    title: "Scorpion Tattoo Studio",
     description: (
       <>
-        <strong>Vicky’s Tattoo Studio</strong> is a personal project created to
+        <strong>Scorpion Tattoo Studio</strong> is a personal project created to
         design a professional and visually engaging website for a tattoo shop.
         Built with <strong>React</strong> and <strong>React-Bootstrap</strong>,
         it combines aesthetics and functionality to provide a user-friendly
         online experience.
       </>
     ),
-    image: "/tattooshop.JPG",
-    projectLink: "https://tattoo-shop-red.vercel.app/",
-    githubLink: "https://github.com/vicky-6/tattoo-shop",
+    image: "/scorpion.JPG",
+    projectLink: "https://scorpion-tattoo-shop.vercel.app/",
+    githubLink: "https://github.com/vicky-6/ScorpianTatooShop",
   },
 ];
 

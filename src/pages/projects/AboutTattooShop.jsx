@@ -2,20 +2,20 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 const AboutTattooShop = () => {
-  const projectLink = "https://tattoo-shop-red.vercel.app/";
-  const githubLink = "https://github.com/vicky-6/tattoo-shop";
+  const projectLink = "https://scorpion-tattoo-shop.vercel.app/";
+  const githubLink = "https://github.com/vicky-6/ScorpianTatooShop";
 
   return (
     <Container className="my-5 " style={{backgroundColor:"grey",}}>
       {/* Container styling for modern look */}
       <div className="content-container px-6" style={{paddingRight:'100px'}}>
-        <h1 className="title">Vicky's Tattoo Studio</h1>
+        <h1 className="title">Scorpion Tattoo Studio</h1>
         <Row className="align-items-center" xs={1} md={2} gap={4}>
           {/* Left Section */}
           <Col>
             <div className="description-text">
               <p>
-                <strong>Vicky’s Tattoo Studio</strong> is a personal project created to design a professional and visually engaging website for a tattoo shop. Built with <strong>React</strong> and <strong>React-Bootstrap</strong>, it combines aesthetics and functionality to provide a user-friendly online experience.
+                <strong>Scorpion Tattoo Studio</strong> is a personal project created to design a professional and visually engaging website for a tattoo shop. Built with <strong>React</strong> and <strong>React-Bootstrap</strong>, it combines aesthetics and functionality to provide a user-friendly online experience.
               </p>
               <p>
                 The project includes an <strong>attractive gallery</strong> to showcase tattoo designs and styles, helping potential customers explore and get inspired. Additionally, an <strong>online booking system</strong> was implemented to allow users to schedule appointments easily and efficiently.
@@ -48,7 +48,7 @@ const AboutTattooShop = () => {
             <div className="image-wrapper">
               <a href={projectLink} target="_blank" rel="noopener noreferrer">
                 <img
-                  src="/tattooshop.JPG"
+                  src="/scorpion.JPG"
                   alt="Tattoo Studio"
                   className="hover-image"
                 />
