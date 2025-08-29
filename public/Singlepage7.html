@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VIGNESH S — Resume</title>
+  <style>
+    :root{
+      --bg: #fdf6e3;   /* newspaper-like sepia */
+      --text: #000000;
+      --muted: #444444;
+      --accent: #004aad;
+      --heading: #222222;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Georgia", "Times New Roman", serif;
+      line-height: 1.55;
+      font-size: 16px;
+    }
+
+    /* Background effect layer (guaranteed print) */
+    .background-paper {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        #fdf6e3,
+        #fdf6e3 28px,
+        #f9f1dc 29px
+      );
+      opacity: 0.97;
+      z-index: -1;
+    }
+
+    /* Accent sidebar */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 6px; height: 100%;
+      background: var(--accent);
+    }
+
+    .container{
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px 0 40px;
+      border: 3px solid var(--accent);  /* full-page border */
+      background: rgba(255,255,255,0.88);
+    }
+
+    /* Header */
+    .header{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #999;
+    }
+    .header .left{ width: 45%; }
+    .name{ margin: 0; font-size: 2.4rem; font-weight: 700; color: var(--accent); letter-spacing: 0.5px; }
+    .role{ margin: 4px 0 0 0; font-size: 1.1rem; color: var(--muted); font-style: italic; }
+    .contact{
+      list-style: none; margin: 0; padding: 0;
+      display: flex; flex-direction: column; gap: 4px;
+      font-size: 0.95rem; text-align: right;
+    }
+    .contact a{ color: var(--text); text-decoration: none; }
+    .contact a:hover{ color: var(--accent); }
+
+    /* Section cards */
+    .card{
+      margin: 16px 0;
+    }
+    .card h2{
+      margin: 0 0 10px 0;
+      font-size: 1.35rem;
+      color: var(--accent);
+      border-bottom: 2px dashed var(--accent);
+      padding-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    /* Subheadings */
+    .project h3, .job h3, .edu h3{
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--heading);
+      margin: 0 0 4px 0;
+      border-left: 4px solid var(--accent);
+      padding-left: 6px;
+    }
+
+    /* Tags */
+    .tags{
+      display: flex; flex-wrap: wrap; gap: 8px;
+      list-style: none; padding: 0; margin: 0;
+    }
+    .tags li{
+      background: #f0e6d2;
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.9rem;
+      border: 1px solid #d0c8b0;
+    }
+
+    /* Projects + Experience */
+    .bordered{
+      padding: 6px 0;
+      margin: 10px 0;
+    }
+    .project p, .job p{ margin: 3px 0; font-size: 0.92rem; }
+    .job-head{ display: flex; justify-content: space-between; flex-wrap: wrap; }
+    .meta{ color: var(--muted); font-size: 0.85rem; font-style: italic; }
+    .bullets{ margin: 4px 0; padding-left: 20px; font-size: 0.9rem; }
+    .bullets li{ margin: 2px 0; }
+
+    /* Footer */
+    .footer{
+      text-align: center;
+      margin: 20px 0 10px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .print-btn, .preview-btn {
+      margin: 8px 6px; padding: 8px 16px;
+      border: none; border-radius: 4px;
+      background: var(--accent); color: #fff;
+      font-size: 0.9rem; font-weight: 600;
+      cursor: pointer;
+    }
+    .print-btn:hover, .preview-btn:hover { background: #003080; }
+
+    /* Print adjustments */
+    @page { size: A4; margin: 0; }
+    @media print {
+      body { 
+        -webkit-print-color-adjust: exact; 
+        print-color-adjust: exact;
+      }
+      .container{ border: 2px solid #000; background: #fdf6e3; }
+      .print-btn, .preview-btn { display: none; }
+    }
+
+    /* Preview Mode */
+    body.preview {
+      zoom: 0.9;
+      background: #fdf6e3 !important;
+      color: #000 !important;
+    }
+    body.preview::before { background: #000; }
+    body.preview .container{ border: 2px solid #000; }
+  </style>
+</head>
+<body>
+  <div class="background-paper"></div>
+  <main class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="left">
+        <h1 class="name">VIGNESH S</h1>
+        <p class="role">Quality Assurance Engineer → Aspiring MERN Full-Stack Developer</p>
+      </div>
+      <ul class="right contact">
+        <li>📞 <a href="tel:+918248429488">+91 8248429488</a></li>
+        <li>✉️ <a href="mailto:svickyvenkats@gmail.com">svickyvenkats@gmail.com</a></li>
+        <li>🔗 <a href="https://linkedin.com/in/vignesh-s-8ba306148/" target="_blank">LinkedIn</a></li>
+        <li>💻 <a href="https://github.com/vicky-6" target="_blank">GitHub</a></li>
+        <li>📍 Theni, Tamil Nadu 625582</li>
+      </ul>
+    </header>
+
+    <!-- Objective -->
+    <section class="card">
+      <h2>🎯 Objective</h2>
+      <p>
+        I have 4 years of experience in QA and now I want to move into MERN Full-Stack Development.
+        My QA background helps me ship reliable, scalable features with strong testing foundations
+        while building modern web applications.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="card">
+      <h2>🛠 Skills</h2>
+      <ul class="tags">
+        <li>HTML</li><li>CSS</li><li>Bootstrap</li><li>JavaScript</li>
+        <li>React.js</li><li>Node.js</li><li>Express.js</li><li>MongoDB</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section class="card">
+      <h2>📂 Projects</h2>
+      <div class="project bordered">
+        <h3>WaveyVig</h3>
+        <p>
+          A personal tech project built with Vite, React, and React-Bootstrap to explore modern web
+          development concepts. Features responsive design, reusable components, and accessibility best practices.
+        </p>
+        <p><strong>URL:</strong> <a href="https://waveyvig-tech.vercel.app/" target="_blank">waveyvig-tech.vercel.app</a></p>
+      </div>
+      <div class="project bordered">
+        <h3>Scorpion Tattoo Studio</h3>
+        <p>
+          A professional website designed for a tattoo studio using React and React-Bootstrap.
+          Combines aesthetics with functionality to deliver a clean, user-friendly experience.
+        </p>
+        <p><strong>URL:</strong> <a href="https://scorpion-tattoo-studio.vercel.app/" target="_blank">scorpion-tattoo-studio.vercel.app</a></p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="card">
+      <h2>💼 Experience</h2>
+      <article class="job bordered">
+        <div class="job-head">
+          <h3>Quality Assurance Engineer — Sunstone Pvt Ltd</h3>
+          <span class="meta">Gurgaon · Mar 2022 – Sep 2023</span>
+        </div>
+        <p><strong>Project:</strong> CRM</p>
+        <ul class="bullets">
+          <li>Conducted thorough testing to ensure software reliability.</li>
+          <li>Applied Agile techniques for timely milestones.</li>
+          <li>Mentored junior QA engineers and improved test coverage.</li>
+        </ul>
+        <p class="stack"><strong>Tools:</strong> JIRA, MySQL, Postman, RestAssured, Selenium</p>
+      </article>
+
+      <article class="job bordered">
+        <div class="job-head">
+          <h3>Associate QA Engineer — Clicklabs Pvt Ltd</h3>
+          <span class="meta">Panchkula · May 2020 – Feb 2022</span>
+        </div>
+        <p><strong>Products:</strong> Yelo & Tookan</p>
+        <ul class="bullets">
+          <li>Ensured efficient product launches with off-site coordination.</li>
+          <li>Resolved customer issues by identifying root causes.</li>
+          <li>Maintained product quality with advanced testing methods.</li>
+        </ul>
+        <p class="stack"><strong>Tools:</strong> Trello, MySQL, Postman, RestAssured</p>
+      </article>
+
+      <article class="job bordered">
+        <div class="job-head">
+          <h3>QA Intern — Clicklabs Pvt Ltd</h3>
+          <span class="meta">Panchkula · Aug 2019 – Apr 2020</span>
+        </div>
+        <p><strong>Products:</strong> Yelo & Tookan</p>
+        <ul class="bullets">
+          <li>Generated detailed test reports and milestones.</li>
+          <li>Created technical documentation for clients.</li>
+          <li>Collaborated with cross-functional teams.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Education -->
+    <section class="card">
+      <h2>🎓 Education</h2>
+      <div class="edu">
+        <h3>Lovely Professional University</h3>
+        <p class="meta">B.Tech CSE · Major: SAP ABAP · CGPA: 7.31 · Apr 2020</p>
+      </div>
+      <div class="edu">
+        <h3>Mohamed Sathak Polytechnic College</h3>
+        <p class="meta">Diploma in Marine Engineering · CGPA: 7.5 · Apr 2017</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Vignesh S — Resume</p>
+      <button class="preview-btn" onclick="document.body.classList.toggle('preview')">👁 Toggle Print Preview</button>
+      <button class="print-btn" onclick="window.print()">🖨 Print / Save as PDF</button>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

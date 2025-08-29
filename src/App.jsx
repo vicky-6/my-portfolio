@@ -1,7 +1,7 @@
 import "./App.css";
 import LandingPage from "./pages/LandingPage/Subline";
-import ResumePage from "./pages/Resume";
-import Contact from "./pages/Contact";
+import ResumePage from "./pages/Resume/Resume";
+// import Contact from "./pages/Contact";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Aboutmain from "./pages/about/Aboutmain";
 import MainLayout from "./layout/MainLayout";
@@ -9,7 +9,8 @@ import ProjectsPage from "./pages/projects/projects";
 import AboutTattooShop from "./pages/projects/AboutTattooShop";
 import AboutWaveyvig from "./pages/projects/AboutWaveyvig";
 import Experience from "./pages/Experience/Experience";
-import ContactUs from "./pages/ContactUs";
+import ContactUs from "./pages/Contact/ContactUs";
+// import Resume from "./pages/Resume";
 
 function App() {
   return (

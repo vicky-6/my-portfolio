@@ -10,7 +10,7 @@ const ResumePage = () => {
         <div className="container p-4">
           {/* Download link */}
           <div className="text-center mb-4">
-            <a href="/vignesh-resume.pdf" download className="btn btn-success btn-lg">
+            <a href="/vigneshs-resume.pdf" download className="btn btn-success btn-lg">
               Download Resume
             </a>
           </div>
@@ -27,24 +27,14 @@ const ResumePage = () => {
                 <p><strong>GitHub:</strong> https://github.com/vicky-6</p>
                 <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/vignesh-s-8ba306148/</p>
               </div>
-              {/* <div className="card p-3 shadow-sm bg-white rounded">
-                <h5 className="mb-3">SKILLS</h5>
-                <ul>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>React</li>
-                  <li>Bootstrap v5.0</li>
-                  <li>ReactBootstrap v2.9.0</li>
-                </ul>
-              </div> */}
+              
             </div>
 
             {/* Right side: Show image of PDF page */}
             <div className="col-md-8 mb-4">
               <div className="p-2 rounded shadow-sm" style={{ width: '100%', height: '150vh' }}>
                 <img 
-                  src="/vignesh-resume.jpg"
+                  src="/Vignesh_FS.jpg"
                   alt="Resume Preview"
                   style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 />
@@ -54,7 +44,7 @@ const ResumePage = () => {
 
           {/* Bottom download button */}
           <div className="text-center mt-4">
-            <a href="/vignesh-resume.pdf" download className="btn btn-success btn-lg">
+            <a href="/vigneshs-resume.pdf" download className="btn btn-success btn-lg">
               Download Resume
             </a>
           </div>
