@@ -9,9 +9,9 @@ const LandingPage = () => {
 
   // background images
   const images = {
-    about: "/aboutme8.jpg",
+    about: "/about.jpg",
     projects:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+      "/project.jpg",
     resume: "/resume3.jpg",
     contact: "/contact2.avif",
   };

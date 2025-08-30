@@ -42,7 +42,7 @@ const projects = [
       </>
     ),
     image: "/scorpion.JPG",
-    projectLink: "https://scorpion-tattoo-shop.vercel.app/",
+    projectLink: "https://scorpion-tattoo-studio.vercel.app/",
     githubLink: "https://github.com/vicky-6/ScorpianTatooShop",
   },
 ];

@@ -1,6 +1,6 @@
 import "./App.css";
 import LandingPage from "./pages/LandingPage/Subline";
-import ResumePage from "./pages/Resume/Resume";
+import ResumePage from "./pages/Resume/Resume4";
 // import Contact from "./pages/Contact";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Aboutmain from "./pages/about/Aboutmain";

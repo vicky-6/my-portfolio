@@ -34,7 +34,7 @@ const ResumePage = () => {
             <div className="col-md-8 mb-4">
               <div className="p-2 rounded shadow-sm" style={{ width: '100%', height: '150vh' }}>
                 <img 
-                  src="/Vignesh_FS.jpg"
+                  src="/VIGNESHS-single.jpg"
                   alt="Resume Preview"
                   style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                 />
