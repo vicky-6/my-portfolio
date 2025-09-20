@@ -32,7 +32,7 @@ const skills = [
 
 const SkillsetGrid = () => {
   return (
-    <Container className="text-center my-4">
+    <Container className="text-center my-4 pb-4">
       <h2>
         Professional <span className="text-success">Skillset</span>
       </h2>

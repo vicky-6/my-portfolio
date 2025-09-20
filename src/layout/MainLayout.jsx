@@ -2,12 +2,13 @@ import React from "react";
 import CustomNavbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
+import { Outlet } from "react-router-dom";
 
-const MainLayout = ({children}) => {
+const MainLayout = () => {
   return (
     <div className="main-layout">
       <CustomNavbar />
-      <main>{children}</main>
+      <main><Outlet /></main>
       <Footer />
       <WhatsAppButton />
     </div>

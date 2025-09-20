@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import TargetCursor from "../../reuseableComponent/TargetCursor";
 
 const LandingPage = () => {
   const navigate = useNavigate();
   const [typedText, setTypedText] = useState({});
   const [completed, setCompleted] = useState({});
 
-  // background images
+  // Background images
   const images = {
-    about: "/about.jpg",
-    projects:
-      "/project.jpg",
+    about: "/aboutme7.jpeg",
+    projects: "/project.jpg",
     resume: "/resume3.jpg",
     contact: "/contact2.avif",
   };
 
-  // Titles + Subtext
+  // Titles
   const titles = {
     about: { main: "About Me", sub: "Discover my journey" },
     projects: { main: "Projects", sub: "See what I've built" },
@@ -24,6 +25,7 @@ const LandingPage = () => {
     contact: { main: "Contact", sub: "Let's connect" },
   };
 
+  // Typing effect
   useEffect(() => {
     Object.keys(titles).forEach((key, index) => {
       let i = 0;
@@ -39,11 +41,12 @@ const LandingPage = () => {
             clearInterval(interval);
             setCompleted((prev) => ({ ...prev, [key]: true }));
           }
-        }, 120); // typing speed
-      }, index * 700); // delay between sections
+        }, 120);
+      }, index * 700);
     });
   }, []);
 
+  // Reusable styles
   const columnStyle = (bgImage) => ({
     backgroundImage: `url(${bgImage})`,
     backgroundSize: "cover",
@@ -58,140 +61,95 @@ const LandingPage = () => {
     padding: "20px",
     position: "relative",
     overflow: "hidden",
+    borderRadius: "12px",
   });
+
+  // Motion variants
+  const cardVariants = {
+    hidden: { opacity: 0, scale: 0.9, y: 40 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.8 } },
+    hover: { scale: 1.05, transition: { duration: 0.3 } },
+  };
+
+ const buttonVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 30, 
+    scale: 0.9 
+  },
+  visible: { 
+    opacity: 1,  
+    y: 0, 
+    scale: 1,
+    backgroundColor: "#ffd700",
+    transition: { 
+      delay: 0.3, 
+      duration: 0.6, 
+      type: "spring", 
+      stiffness: 120 
+    } 
+  },
+  hover: { 
+    scale: 1.12, 
+    backgroundColor: "#ffd700",
+    boxShadow: "0 0 20px rgba(255, 215, 0, 0.8)",
+    transition: { 
+      yoyo: Infinity, // keeps pulsing
+      duration: 0.4 
+    }
+  },
+  tap: { 
+    scale: 0.95, 
+    boxShadow: "0 0 8px rgba(255, 215, 0, 0.6)" 
+  },
+};
+
 
   return (
     <>
-      <style>{`
-        @keyframes pulseGlow {
-          0% { box-shadow: 0 0 8px rgba(255, 215, 0, 0.4); }
-          50% { box-shadow: 0 0 25px rgba(255, 215, 0, 0.9); }
-          100% { box-shadow: 0 0 8px rgba(255, 215, 0, 0.4); }
-        }
-
-        .soft-hover {
-          transition: transform 0.4s ease, filter 0.4s ease;
-        }
-        .soft-hover:hover {
-          transform: scale(1.04);
-          filter: brightness(1.1) saturate(1.2);
-          animation: pulseGlow 2s infinite;
-        }
-
-        @keyframes popIn {
-          0% { transform: scale(0.8); opacity: 0; }
-          80% { transform: scale(1.05); opacity: 1; }
-          100% { transform: scale(1); }
-        }
-
-        .pop-text {
-          font-size: 2rem;
-          font-weight: bold;
-          animation: popIn 0.8s ease forwards;
-        }
-
-        .sub-btn {
-          font-size: 0.95rem;
-          margin-top: 12px;
-          padding: 8px 18px;
-          background: rgba(255, 215, 0, 0.9);
-          border: none;
-          border-radius: 25px;
-          color: #000;
-          font-weight: 500;
-          cursor: pointer;
-          opacity: 0;
-          transform: translateY(10px);
-          transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .sub-btn.show {
-          opacity: 1;
-          transform: translateY(0);
-        }
-
-        .sub-btn:hover {
-          background: #ffd700;
-          transform: scale(1.05);
-        }
-
-        .blinking-cursor {
-          display: inline-block;
-          margin-left: 2px;
-          animation: blink 0.8s steps(1) infinite;
-        }
-
-        @keyframes blink {
-          50% { opacity: 0; }
-        }
-
-        /* ✅ Mobile: stack items one by one */
-        @media (max-width: 768px) {
-          .mobile-stack .col {
-            flex: 0 0 100%;
-            max-width: 100%;
-            margin-bottom: 20px;
-          }
-          .pop-text {
-            font-size: 1.6rem;
-          }
-          .sub-btn {
-            font-size: 0.85rem;
-            padding: 7px 15px;
-          }
-        }
-      `}</style>
-
+      {/* <TargetCursor /> */}
       <Container fluid style={{ padding: 0 }}>
-        {/* ✅ Desktop / Tablet view (2x2 grid WITH sub-btn) */}
-        <div className="d-none d-md-block">
-          <Row className="g-0">
-            {Object.keys(images).map((key) => (
-              <Col
-                key={key}
-                md={key === "about" ? 7 : key === "projects" ? 5 : key === "resume" ? 4 : 8}
-                className="soft-hover"
+        <Row className="g-0 justify-content-center">
+          {Object.keys(images).map((key, index) => (
+            <Col
+              key={key}
+              xs={12}
+              md={key === "about" ? 7 : key === "projects" ? 5 : key === "resume" ? 4 : 8}
+              className="p-2"
+            >
+              <motion.div
+                className="soft-hover h-100"
                 style={columnStyle(images[key])}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                whileHover="hover"
+                viewport={{ once: true }}
               >
-                <h2 className="pop-text">
+                <motion.h2
+                  className="pop-text"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                >
                   {typedText[key]}
                   {completed[key] ? "" : <span className="blinking-cursor">|</span>}
-                </h2>
-                <button
-                  className={`sub-btn ${completed[key] ? "show" : ""}`}
-                  onClick={() => navigate(`/${key}`)}
-                >
-                  {titles[key].sub}
-                </button>
-              </Col>
-            ))}
-          </Row>
-        </div>
+                </motion.h2>
 
-        {/* ✅ Mobile view (stacked one by one with typing + clickable subtext button) */}
-        <div className="d-block d-md-none mobile-stack">
-          <Row>
-            {Object.keys(images).map((key) => (
-              <Col
-                xs={12}
-                key={key}
-                className="soft-hover"
-                style={columnStyle(images[key])}
-              >
-                <h2 className="pop-text">
-                  {typedText[key]}
-                  {completed[key] ? "" : <span className="blinking-cursor">|</span>}
-                </h2>
-                <button
+                <motion.button
                   className={`sub-btn ${completed[key] ? "show" : ""}`}
                   onClick={() => navigate(`/${key}`)}
+                  variants={buttonVariants}
+                  initial="hidden"
+                  animate={completed[key] ? "visible" : "hidden"}
+                  whileHover="hover"
                 >
                   {titles[key].sub}
-                </button>
-              </Col>
-            ))}
-          </Row>
-        </div>
+                </motion.button>
+              </motion.div>
+            </Col>
+          ))}
+        </Row>
       </Container>
     </>
   );

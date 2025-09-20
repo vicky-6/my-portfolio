@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import TextJump from "../../reuseableComponent/TextJumpOneByOne";
+import TrueFocus from "../../reuseableComponent/TrueFocus";
 
 const About = () => {
   return (
@@ -10,10 +11,18 @@ const About = () => {
           fluid
           className="d-flex flex-column flex-lg-row align-items-center justify-content-center p-5"
         >
+          {/* Right Image */}
+          <div className="about-image me-lg-5 mb-4 mb-lg-0">
+            <img
+              src="vignesh-profile.jpeg"
+              alt="My Photo"
+              className="img-fluid rounded-circle"
+            />
+          </div>
           {/* Left Content */}
-          <div className="text-dark mb-4 mb-lg-0 me-lg-4 text-center text-lg-start">
+          <div className="text-dark mb-1 mb-lg-0 me-lg-4 text-center text-lg-start">
             <h1 className="display-4 mb-3">
-              <TextJump text="know who i'am" />
+              <TrueFocus />
             </h1>
             <p className="lead mb-4 fs-5">
               Dear Recruiter, I am{" "}
@@ -43,14 +52,7 @@ const About = () => {
             </p>
             <p>Thanks for reading about me!</p>
           </div>
-          {/* Right Image */}
-          <div className="about-image">
-            <img
-              src="vignesh-profile.jpeg"
-              alt="My Photo"
-              className="img-fluid rounded-circle"
-            />
-          </div>
+          
         </Container>
       </div>
 

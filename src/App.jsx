@@ -1,89 +1,38 @@
 import "./App.css";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import LandingPage from "./pages/LandingPage/Subline";
 import ResumePage from "./pages/Resume/Resume4";
-// import Contact from "./pages/Contact";
-import { Routes, Route, Navigate } from "react-router-dom";
 import Aboutmain from "./pages/about/Aboutmain";
-import MainLayout from "./layout/MainLayout";
 import ProjectsPage from "./pages/projects/projects";
 import AboutTattooShop from "./pages/projects/AboutTattooShop";
 import AboutWaveyvig from "./pages/projects/AboutWaveyvig";
 import Experience from "./pages/Experience/Experience";
 import ContactUs from "./pages/Contact/ContactUs";
-// import Resume from "./pages/Resume";
+
+import MainLayout from "./layout/MainLayout";
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/" element={<Navigate to="/about" replace />} />
-        <Route
-          path="/about"
-          element={
-            <MainLayout>
-              {" "}
-              <Aboutmain />{" "}
-            </MainLayout>
-          }
-        />
-        <Route
-          path="/projects"
-          element={
-            <MainLayout>
-              {" "}
-              <ProjectsPage />{" "}
-            </MainLayout>
-          }
-        />
-        <Route
-          path="/resume"
-          element={
-            <MainLayout>
-              {" "}
-              <ResumePage />{" "}
-            </MainLayout>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <MainLayout>
-              {" "}
-              <ContactUs />{" "}
-            </MainLayout>
-          }
-        />
-        <Route
-          path="/abouttattooshop"
-          element={
-            <MainLayout>
-              {" "}
-              <AboutTattooShop />{" "}
-            </MainLayout>
-          }
-        />
-        <Route
-          path="/AboutWaveyvig"
-          element={
-            <MainLayout>
-              {" "}
-              <AboutWaveyvig />{" "}
-            </MainLayout>
-          }
-        />
-        <Route
-          path="/experience"
-          element={
-            <MainLayout>
-              {" "}
-              <Experience />{" "}
-            </MainLayout>
-          }
-        />
-        <Route path="*" element={<h2>Page Not Found</h2>} />
-      </Routes>
-    </>
+    <Routes>
+      {/* Landing page at root */}
+      <Route path="/" element={<LandingPage />} />
+
+      {/* Nested routes inside MainLayout */}
+      <Route path="/" element={<MainLayout />}>
+        <Route path="about" element={<Aboutmain />} />
+        <Route path="projects" element={<ProjectsPage />} />
+        <Route path="resume" element={<ResumePage />} />
+        <Route path="contact" element={<ContactUs />} />
+        <Route path="abouttattooshop" element={<AboutTattooShop />} />
+        <Route path="aboutwaveyvig" element={<AboutWaveyvig />} />
+        <Route path="experience" element={<Experience />} />
+        <Route path="" element={<Navigate to="about" replace />} /> {/* Default redirect */}
+      </Route>
+
+      {/* Catch-all route */}
+      <Route path="*" element={<h2>Page Not Found</h2>} />
+    </Routes>
   );
 }
 
