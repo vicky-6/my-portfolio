@@ -14,10 +14,10 @@ const Footer = () => {
           </Col>
           <Col xs="12" md="4" className="text-center text-md-end">
             {/* Social icons */}
-            <a href="#" className="text-white mx-2" aria-label="Facebook">
+            {/* <a href="#" className="text-white mx-2" aria-label="Facebook">
               <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" className="text-white mx-2" aria-label="LinkedIn">
+            </a> */}
+            {/* <a href="#" className="text-white mx-2" aria-label="LinkedIn">
               <i className="fab fa-linkedin-in"></i>
             </a>
             <a href="#" className="text-white mx-2" aria-label="WhatsApp">
@@ -25,7 +25,7 @@ const Footer = () => {
             </a>
             <a href="#" className="text-white mx-2" aria-label="Instagram">
               <i className="fab fa-instagram"></i>
-            </a>
+            </a> */}
           </Col>
         </Row>
       </Container>

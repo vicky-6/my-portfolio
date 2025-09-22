@@ -2,6 +2,9 @@ import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import LandingPage from "./pages/LandingPage/Subline";
+//import LandingPage from "./pages/LandingPage/LandingPage";
+//import LandingPage from "./pages/LandingPage/BlickWith3d";
+//import LandingPage from "./pages/LandingPage/CardAnimated";
 import ResumePage from "./pages/Resume/Resume4";
 import Aboutmain from "./pages/about/Aboutmain";
 import ProjectsPage from "./pages/projects/projects";
