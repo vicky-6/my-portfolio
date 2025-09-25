@@ -334,6 +334,7 @@ const ContactUs = () => {
           href="https://wa.me/8248429488"
           target="_blank"
           rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
         >
           <FaWhatsapp />
           WhatsApp
@@ -354,15 +355,16 @@ const ContactUs = () => {
           href="https://www.linkedin.com/in/vignesh-s-8ba306148/"
           target="_blank"
           rel="noopener noreferrer"
+          style={{ textDecoration: "none" }}
         >
           <FaLinkedin />
           LinkedIn
         </ContactCard>
 
-        {/* <ContactCard as="a" href="tel:+918248429488">
+        <ContactCard as="a" href="tel:+918248429488" style={{ textDecoration: "none" }}>
           <FaPhone />
           Call
-        </ContactCard> */}
+        </ContactCard>
       </ContactGrid>
 
       {showPopup && (
