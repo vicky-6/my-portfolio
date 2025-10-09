@@ -361,10 +361,10 @@ const ContactUs = () => {
           LinkedIn
         </ContactCard>
 
-        <ContactCard as="a" href="tel:+918248429488" style={{ textDecoration: "none" }}>
+        {/* <ContactCard as="a" href="tel:+918248429488" style={{ textDecoration: "none" }}>
           <FaPhone />
           Call
-        </ContactCard>
+        </ContactCard> */}
       </ContactGrid>
 
       {showPopup && (
