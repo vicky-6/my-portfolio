@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import TextJump from "../../reuseableComponent/TextJumpOneByOne";
 import TrueFocus from "../../reuseableComponent/TrueFocus";
+import modern_cursor from "../../reuseableComponent/modern_cursor";
 
 const About = () => {
   return (

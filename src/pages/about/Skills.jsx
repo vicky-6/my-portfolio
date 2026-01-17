@@ -3,7 +3,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 
 // Sample icons 
 import { FaJs, FaReact, FaNodeJs, FaBootstrap, FaPython,FaGithub , FaAws, FaGem, FaPenFancy, FaLink, FaDocker,FaHtml5, FaCss3Alt } from 'react-icons/fa';
-import { SiTypescript,SiPostman, SiJira, SiMongodb  } from "react-icons/si";
+import { SiTypescript,SiPostman, SiJira, SiMongodb, SiTailwindcss  } from "react-icons/si";
 const skills = [
   { icon: <FaHtml5 size={40} />, label: "HTML" },
   { icon: <FaCss3Alt size={40} />, label: "CSS" },
@@ -15,6 +15,8 @@ const skills = [
   { icon: <SiJira size={40} />, label: "Jira" },
   { icon: <FaGithub size={40} />, label: "GitHub" },
   { icon: <SiMongodb size={40} color="#4DB33D" />, label: "MongoDB" },
+  { icon: <SiTailwindcss size={40} />, label: "TailwindCSS" }
+
   
   // { icon: <FaPython size={40} />, label: 'Python' },
   // { icon: <FaAws size={40} />, label: 'AWS' },

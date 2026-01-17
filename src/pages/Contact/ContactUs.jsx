@@ -329,7 +329,7 @@ const ContactUs = () => {
           Mail
         </ContactCard>
 
-        <ContactCard
+        {/* <ContactCard
           as="a"
           href="https://wa.me/8248429488"
           target="_blank"
@@ -338,9 +338,9 @@ const ContactUs = () => {
         >
           <FaWhatsapp />
           WhatsApp
-        </ContactCard>
+        </ContactCard> */}
 
-        {/* <ContactCard
+        <ContactCard
           as="a"
           href="https://instagram.com/vignesh_s_06"
           target="_blank"
@@ -348,7 +348,7 @@ const ContactUs = () => {
         >
           <FaInstagram />
           Instagram
-        </ContactCard> */}
+        </ContactCard>
 
         <ContactCard
           as="a"
