@@ -329,7 +329,7 @@ const ContactUs = () => {
           Mail
         </ContactCard>
 
-        {/* <ContactCard
+        <ContactCard
           as="a"
           href="https://wa.me/8248429488"
           target="_blank"
@@ -338,7 +338,7 @@ const ContactUs = () => {
         >
           <FaWhatsapp />
           WhatsApp
-        </ContactCard> */}
+        </ContactCard>
 
         <ContactCard
           as="a"
