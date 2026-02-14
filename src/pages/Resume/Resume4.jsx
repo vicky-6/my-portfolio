@@ -135,7 +135,7 @@ const ResumePage = () => {
 
         .resume-img {
           width: 100%;
-          height: 100%;
+          height: 200%;
           object-fit: contain;
           display: block;
         }
