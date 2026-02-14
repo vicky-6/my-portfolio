@@ -7,7 +7,7 @@ const Resume = () => {
 
     doc.html(document.getElementById("resume"), {
       callback: function (doc) {
-        doc.save("Vignesh_Resume.pdf");
+        doc.save("Vignesh_updated.pdf");
       },
       x: 20,
       y: 20,
