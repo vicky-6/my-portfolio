@@ -28,6 +28,15 @@ const experiences = [
     description: 'Led automation testing for the CRM product using Selenium, RestAssured, and BrowserStack. I managed test cases in JIRA, analyzed web analytics with Google Analytics, and ensured cross-browser compatibility. My focus was on improving test coverage and reducing manual testing efforts.',
     technologies: ['JIRA', 'MySQL', 'Postman', 'RestAssured', 'Google Analytics', 'BrowserStack', 'Selenium'],
   },
+  {
+  companyName: 'Zhahi Tech',
+  role: 'Associate MERN Stack Developer',
+  location: 'Theni, Tamilnadu',
+  product: 'Associate Trainer',
+  duration: 'May 2020 - Feb 2022',
+  description: 'In this role, I developed and maintained full-stack web applications using the MERN stack (MongoDB, Express.js, React.js, and Node.js). I built responsive user interfaces, created RESTful APIs, managed database operations, and implemented authentication and authorization features. I collaborated with cross-functional teams to design, develop, and deploy scalable web solutions while ensuring performance optimization and code quality.',
+  technologies: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'MySQL', 'Postman', 'Trello']
+}
 ];
 
 const Experience = () => {
