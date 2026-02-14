@@ -9,7 +9,7 @@ const ResumePage = () => {
           {/* Top download link */}
           <div className="text-center mb-4">
             <a
-              href="/vigneshs-resume.pdf"
+              href="/vigneshs-updated.pdf"
               download
               className="btn btn-success btn-lg"
             >
